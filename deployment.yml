@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: batch13-deployment
+  namespace: batch13
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: batch13-nginx
+  template:
+    metadata:
+      labels:
+        app: batch13-nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
