@@ -4,11 +4,10 @@ metadata:
   name: backend-service
   namespace: tmb13be
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: backend
   ports:
     - protocol: TCP
       port: 3001
       targetPort: 3001
-      nodePort: 30085
