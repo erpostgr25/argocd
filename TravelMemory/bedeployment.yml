@@ -26,6 +26,3 @@ spec:
               secretKeyRef:
                 name: backend-secret
                 key: MONGO_URI
-          volumeMounts:
-            - name:  app-logs
-              mountPath:  /var/log/app
